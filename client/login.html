@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Login</title>
+</head>
+<body class="bg-neutral-900">
+    <header class="sticky top-4 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full before:absolute before:inset-0 before:max-w-[66rem] before:mx-2 before:lg:mx-auto before:rounded-[26px] before:bg-neutral-800/30 before:backdrop-blur-md">
+        <nav class="relative max-w-[66rem] w-full py-2.5 ps-5 pe-2 md:flex md:items-center md:justify-between md:py-0 mx-2 lg:mx-auto">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <!-- Logo -->
+              <a class="flex-none rounded-md text-xl inline-block font-semibold focus:outline-none focus:opacity-80" href="../../templates/agency/index.html" aria-label="Preline">
+                  <img src="/assets/codemitra-high-resolution-logo-transparent.png" width="180" alt="">
+              </a>
+              <!-- End Logo -->
+    
+              <div class="ms-1 sm:ms-2">
+                <!-- Templates Dropdown -->
+                <div class="hs-dropdown  relative  [--auto-close:inside] inline-flex">
+                  <button id="hs-dropdown-preview-navbar" type="button" class="hs-dropdown-toggle  group relative flex justify-center items-center size-8 text-xs rounded-full text-white hover:bg-white/10 focus:bg-white/10 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 disabled:opacity-50 disabled:pointer-events-none focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                    <span class="">
+                      <svg class=" size-4 shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m6 9 6 6 6-6" />
+                      </svg>
+                    </span>
+    
+                    <span class="absolute -top-0.5 -end-0.5">
+                      <span class="relative flex">
+                        <span class="animate-ping absolute inline-flex size-full rounded-full bg-red-400 dark:bg-red-600 opacity-75"></span>
+                        <span class="relative inline-flex size-2 bg-red-500 rounded-full"></span>
+                        <span class="sr-only">Notification</span>
+                      </span>
+                    </span>
+                  </button>
+    
+                  <!-- Dropdown -->
+                  <div class="hs-dropdown-menu hs-dropdown-open:opacity-100 w-full md:w-[450px] transition-[opacity,margin] duration opacity-0 hidden z-30 overflow-hidden border border-gray-200 bg-white rounded-xl shadow-[0_10px_40px_10px_rgba(0,0,0,0.08)] dark:bg-neutral-800 dark:border-neutral-700" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-preview-navbar">
+                    <!-- Tab -->
+                    <div class="p-3 pb-0 flex flex-wrap justify-between items-center gap-3 border-b border-gray-200 dark:border-neutral-700">
+                      <!-- Nav Tab -->
+                      <nav class="flex  gap-x-1" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                        <button type="button" class="hs-tab-active:after:bg-gray-800 hs-tab-active:text-gray-800 px-2 py-1.5 mb-2 relative inline-flex justify-center items-center gap-x-2 text-nowrap  hover:bg-gray-100 text-gray-500 hover:text-gray-800 text-sm rounded-lg disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-100 after:absolute after:-bottom-2 after:inset-x-2 after:z-10 after:h-0.5 after:pointer-events-none dark:hs-tab-active:text-neutral-200 dark:hs-tab-active:after:bg-neutral-400 dark:text-neutral-500 dark:hover:text-neutral-300 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  " id="hs-pmn-item-pro" aria-selected="false" data-hs-tab="#hs-pmn-pro" aria-controls="hs-pmn-pro" role="tab">
+                          Pro
+                        </button>
+                        <button type="button" class="hs-tab-active:after:bg-gray-800 hs-tab-active:text-gray-800 px-2 py-1.5 mb-2 relative inline-flex justify-center items-center gap-x-2 text-nowrap  hover:bg-gray-100 text-gray-500 hover:text-gray-800 text-sm rounded-lg disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-100 after:absolute after:-bottom-2 after:inset-x-2 after:z-10 after:h-0.5 after:pointer-events-none dark:hs-tab-active:text-neutral-200 dark:hs-tab-active:after:bg-neutral-400 dark:text-neutral-500 dark:hover:text-neutral-300 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 active " id="hs-pmn-item-free" aria-selected="true" data-hs-tab="#hs-pmn-free" aria-controls="hs-pmn-free" role="tab">
+                          Free
+                        </button>
+                      </nav>
+                      <!-- End Nav Tab -->
+                    </div>
+                    <!-- End Tab -->
+    
+                    <!-- Tab Content -->
+                    <div id="hs-pmn-pro" class="hidden" role="tabpanel" aria-labelledby="hs-pmn-item-pro">
+                      <!-- Header -->
+                      <div class="p-3 flex flex-wrap justify-between items-center gap-3">
+                        <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Templates (12)</span>
+    
+                        <div class="ms-auto">
+                          <a class="group py-2 px-2.5 rounded-md flex items-center gap-x-1 text-[13px] bg-gray-800 text-white hover:bg-gray-900 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-900 dark:bg-white dark:hover:bg-neutral-200 dark:focus:bg-neutral-200 dark:text-neutral-800" href="../../pro/pricing.html">
+                            Purchase
+                            <svg class="hidden md:inline-block shrink-0 size-3.5 group-hover:translate-x-0.5 transition" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path class="lg:opacity-0 lg:-translate-x-1 lg:group-hover:opacity-100 lg:group-hover:translate-x-0 lg:group-focus:opacity-100 lg:group-focus:translate-x-0 lg:transition" d="M5 12h14" />
+                              <path class="lg:-translate-x-1.5 lg:group-hover:translate-x-0 lg:group-focus:translate-x-0 lg:transition" d="m12 5 7 7-7 7" />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <!-- End Header -->
+    
+                      <!-- Body -->
+                      <div class="p-3 max-h-[25rem] overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500">
+                        <!-- Grid -->
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                          <!-- Link -->
+                          <a class="p-3 relative flex flex-col justify-center items-center gap-y-3 rounded-xl hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  transition" href="../../pro/dashboard/index.html">
+                            <img class="dark:hidden w-28 rounded-lg shadow" src="../../assets/img/demo-previews/img1.jpg" alt="Main Page">
+                            <img class="hidden dark:block w-28 rounded-lg shadow" src="../../assets/img/demo-previews-dark/img1.jpg" alt="Main Page">
+    
+                            <p class="text-sm text-gray-800 dark:text-neutral-400">
+                              Dashboard
+                            </p>
+                          </a>
+                          <!-- End Link -->
+    
+                          <!-- Link -->
+                          <a class="p-3 relative flex flex-col justify-center items-center gap-y-3 rounded-xl hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  transition" href="../../pro/shop/index.html">
+                            <img class="dark:hidden w-28 rounded-lg shadow" src="../../assets/img/demo-previews/img21.jpg" alt="Main Page">
+                            <img class="hidden dark:block w-28 rounded-lg shadow" src="../../assets/img/demo-previews-dark/img21.jpg" alt="Main Page">
+    
+                            <p class="text-sm text-gray-800 dark:text-neutral-400">
+                              Shop
+                            </p>
+                          </a>
+                          <!-- End Link -->
+    
+                          <!-- Link -->
+                          <a class="p-3 relative flex flex-col justify-center items-center gap-y-3 rounded-xl hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  transition" href="../../pro/chat/index.html">
+                            <img class="dark:hidden w-28 rounded-lg shadow" src="../../assets/img/demo-previews/img16.jpg" alt="Main Page">
+                            <img class="hidden dark:block w-28 rounded-lg shadow" src="../../assets/img/demo-previews-dark/img16.jpg" alt="Main Page">
+    
+                            <p class="text-sm text-gray-800 dark:text-neutral-400">
+                              Chat
+                            </p>
+    
+                            <div class="absolute -top-px end-[3px]">
+                              <span class="py-0.5 px-2 inline-flex items-center gap-x-1.5 text-xs font-medium bg-emerald-100 text-emerald-800 rounded-full dark:bg-emerald-900 dark:text-emerald-500">+4</span>
+                            </div>
+                          </a>
+                          <!-- End Link -->
+    
+                          <!-- Link -->
+                          <a class="p-3 relative flex flex-col justify-center items-center gap-y-3 rounded-xl hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  transition" href="../../pro/inbox/index.html">
+                            <img class="dark:hidden w-28 rounded-lg shadow" src="../../assets/img/demo-previews/img26.jpg" alt="Main Page">
+                            <img class="hidden dark:block w-28 rounded-lg shadow" src="../../assets/img/demo-previews-dark/img26.jpg" alt="Main Page">
+    
+                            <p class="text-sm text-gray-800 dark:text-neutral-400">
+                              Inbox
+                            </p>
+                          </a>
+                          <!-- End Link -->
+    
+                          <!-- Link -->
+                          <a class="p-3 relative flex flex-col justify-center items-center gap-y-3 rounded-xl hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  transition" href="../../pro/payment/index.html">
+                            <img class="dark:hidden w-28 rounded-lg shadow" src="../../assets/img/demo-previews/img8.jpg" alt="Main Page">
+                            <img class="hidden dark:block w-28 rounded-lg shadow" src="../../assets/img/demo-previews-dark/img8.jpg" alt="Main Page">
+    
+                            <p class="text-sm text-gray-800 dark:text-neutral-400">
+                              Payment
+                            </p>
+                          </a>
+                          <!-- End Link -->
+    
+                          <!-- Link -->
+                          <a class="p-3 relative flex flex-col justify-center items-center gap-y-3 rounded-xl hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  transition" href="../../pro/ecommerce/index.html">
+                            <img class="dark:hidden w-28 rounded-lg shadow" src="../../assets/img/demo-previews/img4.jpg" alt="Main Page">
+                            <img class="hidden dark:block w-28 rounded-lg shadow" src="../../assets/img/demo-previews-dark/img4.jpg" alt="Main Page">
+    
+                            <p class="text-sm text-gray-800 dark:text-neutral-400">
+                              E-Commerce
+                            </p>
+                          </a>
+                          <!-- End Link -->
+    
+                          <!-- Link -->
+                          <a class="p-3 relative flex flex-col justify-center items-center gap-y-3 rounded-xl hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  transition" href="../../pro/calendars/day.html">
+                            <img class="dark:hidden w-28 rounded-lg shadow" src="../../assets/img/demo-previews/img14.jpg" alt="Main Page">
+                            <img class="hidden dark:block w-28 rounded-lg shadow" src="../../assets/img/demo-previews-dark/img14.jpg" alt="Main Page">
+    
+                            <p class="text-sm text-gray-800 dark:text-neutral-400">
+                              Calendars
+                            </p>
+                          </a>
+                          <!-- End Link -->
+    
+                          <!-- Link -->
+                          <a class="p-3 relative flex flex-col justify-center items-center gap-y-3 rounded-xl hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  transition" href="../../pro/workspace/index.html">
+                            <img class="dark:hidden w-28 rounded-lg shadow" src="../../assets/img/demo-previews/img18.jpg" alt="Main Page">
+                            <img class="hidden dark:block w-28 rounded-lg shadow" src="../../assets/img/demo-previews-dark/img18.jpg" alt="Main Page">
+    
+                            <p class="text-sm text-gray-800 dark:text-neutral-400">
+                              Workspace
+                            </p>
+                          </a>
+                          <!-- End Link -->
+    
+                          <!-- Link -->
+                          <a class="p-3 relative flex flex-col justify-center items-center gap-y-3 rounded-xl hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  transition" href="../../pro/analytics/index.html">
+                            <img class="dark:hidden w-28 rounded-lg shadow" src="../../assets/img/demo-previews/img9.jpg" alt="Main Page">
+                            <img class="hidden dark:block w-28 rounded-lg shadow" src="../../assets/img/demo-previews-dark/img9.jpg" alt="Main Page">
+    
+                            <p class="text-sm text-gray-800 dark:text-neutral-400">
+                              Analytics
+                            </p>
+                          </a>
+                          <!-- End Link -->
+    
+                          <!-- Link -->
+                          <a class="p-3 relative flex flex-col justify-center items-center gap-y-3 rounded-xl hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  transition" href="../../pro/project/index.html">
+                            <img class="dark:hidden w-28 rounded-lg shadow" src="../../assets/img/demo-previews/img10.jpg" alt="Main Page">
+                            <img class="hidden dark:block w-28 rounded-lg shadow" src="../../assets/img/demo-previews-dark/img10.jpg" alt="Main Page">
+    
+                            <p class="text-sm text-gray-800 dark:text-neutral-400">
+                              Project
+                            </p>
+                          </a>
+                          <!-- End Link -->
+    
+                          <!-- Link -->
+                          <a class="p-3 relative flex flex-col justify-center items-center gap-y-3 rounded-xl hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  transition" href="../../pro/saas/index.html">
+                            <img class="dark:hidden w-28 rounded-lg shadow" src="../../assets/img/demo-previews/img11.jpg" alt="Main Page">
+                            <img class="hidden dark:block w-28 rounded-lg shadow" src="../../assets/img/demo-previews-dark/img11.jpg" alt="Main Page">
+    
+                            <p class="text-sm text-gray-800 dark:text-neutral-400">
+                              SaaS
+                            </p>
+                          </a>
+                          <!-- End Link -->
+    
+                          <!-- Link -->
+                          <a class="p-3 relative flex flex-col justify-center items-center gap-y-3 rounded-xl hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  transition" href="../../pro/files/index.html">
+                            <img class="dark:hidden w-28 rounded-lg shadow" src="../../assets/img/demo-previews/img12.jpg" alt="Main Page">
+                            <img class="hidden dark:block w-28 rounded-lg shadow" src="../../assets/img/demo-previews-dark/img12.jpg" alt="Main Page">
+    
+                            <p class="text-sm text-gray-800 dark:text-neutral-400">
+                              Files
+                            </p>
+                          </a>
+                          <!-- End Link -->
+                        </div>
+                        <!-- End Grid -->
+                      </div>
+                      <!-- Body -->
+    
+                      <!-- Footer -->
+                      <div class="p-3 flex flex-wrap justify-center items-center gap-0.5">
+                        <div class="relative ps-2 ms-1 first:ps-0 first:ms-0 first:before:hidden before:hidden md:before:block before:absolute before:top-1/2 before:start-0 before:w-px before:h-4 before:bg-gray-200 before:-translate-y-1/2 dark:before:bg-neutral-700">
+                          <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="../../pro/index.html">
+                            Main page
+                            <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path class="lg:opacity-0 lg:-translate-x-1 lg:group-hover:opacity-100 lg:group-hover:translate-x-0 lg:transition" d="M5 12h14" />
+                              <path class="lg:-translate-x-1.5 lg:group-hover:translate-x-0 lg:transition" d="m12 5 7 7-7 7" />
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="relative ps-2 ms-1 first:ps-0 first:ms-0 first:before:hidden before:hidden md:before:block before:absolute before:top-1/2 before:start-0 before:w-px before:h-4 before:bg-gray-200 before:-translate-y-1/2 dark:before:bg-neutral-700">
+                          <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="../../pro/examples.html">
+                            Examples (600+<!-- (601) -->)
+                            <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path class="lg:opacity-0 lg:-translate-x-1 lg:group-hover:opacity-100 lg:group-hover:translate-x-0 lg:transition" d="M5 12h14" />
+                              <path class="lg:-translate-x-1.5 lg:group-hover:translate-x-0 lg:transition" d="m12 5 7 7-7 7" />
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="relative ps-2 ms-1 first:ps-0 first:ms-0 first:before:hidden before:hidden md:before:block before:absolute before:top-1/2 before:start-0 before:w-px before:h-4 before:bg-gray-200 before:-translate-y-1/2 dark:before:bg-neutral-700">
+                          <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="../../pro/templates.html">
+                            Templates (12)
+                            <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path class="lg:opacity-0 lg:-translate-x-1 lg:group-hover:opacity-100 lg:group-hover:translate-x-0 lg:transition" d="M5 12h14" />
+                              <path class="lg:-translate-x-1.5 lg:group-hover:translate-x-0 lg:transition" d="m12 5 7 7-7 7" />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <!-- End Footer -->
+                    </div>
+                    <!-- End Tab Content -->
+    
+                    <!-- Tab Content -->
+                    <div id="hs-pmn-free" class="" role="tabpanel" aria-labelledby="hs-pmn-item-free">
+                      <!-- Header -->
+                      <div class="p-3 flex flex-wrap justify-between items-center gap-3">
+                        <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Templates (5)</span>
+    
+                        <div class="ms-auto">
+                          <a class="group py-2 px-2.5 rounded-md flex items-center gap-x-1 text-[13px] bg-gray-800 text-white hover:bg-gray-900 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-900 dark:bg-white dark:hover:bg-neutral-200 dark:focus:bg-neutral-200 dark:text-neutral-800" href="../../templates.html">
+                            Free download
+                            <svg class="hidden md:inline-block shrink-0 size-3.5 group-hover:translate-x-0.5 transition" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path class="lg:opacity-0 lg:-translate-x-1 lg:group-hover:opacity-100 lg:group-hover:translate-x-0 lg:group-focus:opacity-100 lg:group-focus:translate-x-0 lg:transition" d="M5 12h14" />
+                              <path class="lg:-translate-x-1.5 lg:group-hover:translate-x-0 lg:group-focus:translate-x-0 lg:transition" d="m12 5 7 7-7 7" />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <!-- End Header -->
+    
+                      <!-- Body -->
+                      <div class="p-3 max-h-[25rem] overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500">
+                        <!-- Grid -->
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                          <!-- Link -->
+                          <a class="p-3 relative flex flex-col justify-center items-center gap-y-3 rounded-xl hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 bg-gray-100 dark:bg-neutral-700 transition" href="../../templates/agency/index.html">
+                            <img class="dark:hidden w-28 rounded-lg shadow" src="../../assets/img/template-previews/img1.jpg" alt="Main Page">
+                            <img class="hidden dark:block w-28 rounded-lg shadow" src="../../assets/img/template-previews-dark/img1.jpg" alt="Main Page">
+    
+                            <p class="text-sm text-gray-800 dark:text-neutral-400">
+                              Agency
+                            </p>
+                          </a>
+                          <!-- End Link -->
+    
+                          <!-- Link -->
+                          <a class="p-3 relative flex flex-col justify-center items-center gap-y-3 rounded-xl hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  transition" href="../../templates/personal/index.html">
+                            <img class="dark:hidden w-28 rounded-lg shadow" src="../../assets/img/template-previews/img3.jpg" alt="Main Page">
+                            <img class="hidden dark:block w-28 rounded-lg shadow" src="../../assets/img/template-previews-dark/img3.jpg" alt="Main Page">
+    
+                            <p class="text-sm text-gray-800 dark:text-neutral-400">
+                              Personal
+                            </p>
+                          </a>
+                          <!-- End Link -->
+    
+                          <!-- Link -->
+                          <a class="p-3 relative flex flex-col justify-center items-center gap-y-3 rounded-xl hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  transition" href="../../templates/admin/index.html">
+                            <img class="dark:hidden w-28 rounded-lg shadow" src="../../assets/img/template-previews/img7.jpg" alt="Main Page">
+                            <img class="hidden dark:block w-28 rounded-lg shadow" src="../../assets/img/template-previews-dark/img7.jpg" alt="Main Page">
+    
+                            <p class="text-sm text-gray-800 dark:text-neutral-400">
+                              Admin
+                            </p>
+                          </a>
+                          <!-- End Link -->
+    
+                          <!-- Link -->
+                          <a class="p-3 relative flex flex-col justify-center items-center gap-y-3 rounded-xl hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  transition" href="../../templates/creative-agency/index.html">
+                            <img class="dark:hidden w-28 rounded-lg shadow" src="../../assets/img/template-previews/img2.jpg" alt="Main Page">
+                            <img class="hidden dark:block w-28 rounded-lg shadow" src="../../assets/img/template-previews-dark/img2.jpg" alt="Main Page">
+    
+                            <p class="text-sm text-gray-800 dark:text-neutral-400">
+                              Creative Agency
+                            </p>
+                          </a>
+                          <!-- End Link -->
+    
+                          <!-- Link -->
+                          <a class="p-3 relative flex flex-col justify-center items-center gap-y-3 rounded-xl hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  transition" href="../../templates/ai-prompt/ai-with-sidebar.html">
+                            <img class="dark:hidden w-28 rounded-lg shadow" src="../../assets/img/template-previews/img4.jpg" alt="Main Page">
+                            <img class="hidden dark:block w-28 rounded-lg shadow" src="../../assets/img/template-previews-dark/img4.jpg" alt="Main Page">
+    
+                            <p class="text-sm text-gray-800 dark:text-neutral-400">
+                              AI Prompt
+                            </p>
+                          </a>
+                          <!-- End Link -->
+                        </div>
+                        <!-- End Grid -->
+                      </div>
+                      <!-- Body -->
+    
+                      <!-- Footer -->
+                      <div class="p-3 flex flex-wrap justify-center items-center gap-0.5">
+                        <div class="relative ps-2 ms-1 first:ps-0 first:ms-0 first:before:hidden before:hidden md:before:block before:absolute before:top-1/2 before:start-0 before:w-px before:h-4 before:bg-gray-200 before:-translate-y-1/2 dark:before:bg-neutral-700">
+                          <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="../../index.html">
+                            Main page
+                            <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path class="lg:opacity-0 lg:-translate-x-1 lg:group-hover:opacity-100 lg:group-hover:translate-x-0 lg:transition" d="M5 12h14" />
+                              <path class="lg:-translate-x-1.5 lg:group-hover:translate-x-0 lg:transition" d="m12 5 7 7-7 7" />
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="relative ps-2 ms-1 first:ps-0 first:ms-0 first:before:hidden before:hidden md:before:block before:absolute before:top-1/2 before:start-0 before:w-px before:h-4 before:bg-gray-200 before:-translate-y-1/2 dark:before:bg-neutral-700">
+                          <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="../../examples.html">
+                            Examples (200+<!-- 202 -->)
+                            <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path class="lg:opacity-0 lg:-translate-x-1 lg:group-hover:opacity-100 lg:group-hover:translate-x-0 lg:transition" d="M5 12h14" />
+                              <path class="lg:-translate-x-1.5 lg:group-hover:translate-x-0 lg:transition" d="m12 5 7 7-7 7" />
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="relative ps-2 ms-1 first:ps-0 first:ms-0 first:before:hidden before:hidden md:before:block before:absolute before:top-1/2 before:start-0 before:w-px before:h-4 before:bg-gray-200 before:-translate-y-1/2 dark:before:bg-neutral-700">
+                          <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="../../templates.html">
+                            Templates (5)
+                            <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path class="lg:opacity-0 lg:-translate-x-1 lg:group-hover:opacity-100 lg:group-hover:translate-x-0 lg:transition" d="M5 12h14" />
+                              <path class="lg:-translate-x-1.5 lg:group-hover:translate-x-0 lg:transition" d="m12 5 7 7-7 7" />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <!-- End Footer -->
+                    </div>
+                    <!-- End Tab Content -->
+                  </div>
+                  <!-- End Dropdown -->
+                </div>
+                <!-- End Templates Dropdown -->
+              </div>
+            </div>
+    
+            <div class="md:hidden">
+              <button type="button" class="hs-collapse-toggle size-8 flex justify-center items-center text-sm font-semibold rounded-full bg-neutral-800 text-white disabled:opacity-50 disabled:pointer-events-none" id="hs-navbar-floating-dark-collapse" aria-expanded="false" aria-controls="hs-navbar-floating-dark" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-floating-dark">
+                <svg class="hs-collapse-open:hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="3" x2="21" y1="6" y2="6" />
+                  <line x1="3" x2="21" y1="12" y2="12" />
+                  <line x1="3" x2="21" y1="18" y2="18" />
+                </svg>
+                <svg class="hs-collapse-open:block hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 6 6 18" />
+                  <path d="m6 6 12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+    
+          <!-- Collapse -->
+          <div id="hs-navbar-floating-dark" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block" aria-labelledby="hs-navbar-floating-dark-collapse">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-end py-2 md:py-0 md:ps-7">
+              <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="../../templates/agency/index.html" aria-current="page">Home</a>
+              <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#stories">Stories</a>
+              <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#">Reviews</a>
+              <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#">Approach</a>
+              <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#">Contact us</a>
+    
+              <div class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] [--is-collapse:true] md:[--is-collapse:false] p-3 ps-px sm:px-3 md:py-4">
+                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle flex items-center w-full text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  About
+                  <svg class="hs-dropdown-open:-rotate-180 md:hs-dropdown-open:rotate-0 duration-300 shrink-0 ms-auto md:ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+    
+                <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-neutral-800 md:shadow-md rounded-lg before:absolute top-full before:-top-5 before:start-0 before:w-full before:h-5" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
+                  <div class="py-1 md:px-1 space-y-1">
+                    <a class="flex items-center gap-x-3.5 py-2 md:px-3 rounded-lg text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#">
+                      About
+                    </a>
+                    <div class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] [--is-collapse:true] md:[--is-collapse:false] relative">
+                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle w-full flex justify-between items-center py-2 md:px-3 text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                        Sub Menu
+                        <svg class="hs-dropdown-open:-rotate-180 md:hs-dropdown-open:-rotate-90 md:-rotate-90 duration-300 shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="m6 9 6 6 6-6" />
+                        </svg>
+                      </button>
+    
+                      <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-neutral-800 md:shadow-md rounded-lg before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
+                        <div class="py-1 md:px-1 space-y-1">
+                          <a class="flex items-center gap-x-3.5 py-2 md:px-3 rounded-lg text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#">
+                            About
+                          </a>
+                          <a class="flex items-center gap-x-3.5 py-2 md:px-3 rounded-lg text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#">
+                            Downloads
+                          </a>
+                          <a class="flex items-center gap-x-3.5 py-2 md:px-3 rounded-lg text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#">
+                            Team Account
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#">
+                      Downloads
+                    </a>
+                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#">
+                      Team Account
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <a class="group inline-flex items-center gap-x-2 py-2 px-3 bg-[#ff0] font-medium text-sm text-neutral-800 rounded-full focus:outline-none" href="login.html">
+                  Login
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- End Collapse -->
+        </nav>
+      </header>
+    <div class="  font-[sans-serif]">
+        <div class="min-h-screen flex flex-col items-center justify-center py-3 px-4">
+          <div class="max-w-md w-full">
+            <a href="javascript:void(0)"><img
+              src="assets/codemitra-high-resolution-logo-transparent.png" alt="logo" class='w-40 mb-8 mx-auto block' />
+            </a>
+  
+            <div class="p-8  bg-neutral-700/30 backdrop-blur-md">
+              <h2 class=" text-center text-2xl text-white font-bold">Sign in</h2>
+              <form id="login-form" class=" mt-8 space-y-4">
+                <div>
+                  <label class="text-white text-sm mb-2 block">User name</label>
+                  <div class="relative flex items-center">
+                    <input name="username" type="text" required class="w-full text-white text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600" placeholder="Enter user name" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb" class="w-4 h-4 absolute right-4" viewBox="0 0 24 24">
+                      <circle cx="10" cy="7" r="6" data-original="#000000"></circle>
+                      <path d="M14 15H6a5 5 0 0 0-5 5 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 5 5 0 0 0-5-5zm8-4h-2.59l.3-.29a1 1 0 0 0-1.42-1.42l-2 2a1 1 0 0 0 0 1.42l2 2a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42l-.3-.29H22a1 1 0 0 0 0-2z" data-original="#000000"></path>
+                    </svg>
+                  </div>
+                </div>
+  
+                <div>
+                  <label class="text-white text-sm mb-2 block">Password</label>
+                  <div class="relative flex items-center">
+                    <input name="password" type="password" required class="w-full text-white text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600" placeholder="Enter password" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb" class="w-4 h-4 absolute right-4 cursor-pointer" viewBox="0 0 128 128">
+                      <path d="M64 104C22.127 104 1.367 67.496.504 65.943a4 4 0 0 1 0-3.887C1.367 60.504 22.127 24 64 24s62.633 36.504 63.496 38.057a4 4 0 0 1 0 3.887C126.633 67.496 105.873 104 64 104zM8.707 63.994C13.465 71.205 32.146 96 64 96c31.955 0 50.553-24.775 55.293-31.994C114.535 56.795 95.854 32 64 32 32.045 32 13.447 56.775 8.707 63.994zM64 88c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm0-40c-8.822 0-16 7.178-16 16s7.178 16 16 16 16-7.178 16-16-7.178-16-16-16z" data-original="#000000"></path>
+                    </svg>
+                  </div>
+                </div>
+  
+                <div class="flex flex-wrap items-center justify-between gap-4">
+                  <div class="flex items-center">
+                    <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" />
+                    <label for="remember-me" class="ml-3 block text-sm text-white">
+                      Remember me
+                    </label>
+                  </div>
+                  <div class="text-sm">
+                    <a href="jajvascript:void(0);" class="text-[#ff0] hover:underline font-semibold">
+                      Forgot your password?
+                    </a>
+                  </div>
+                </div>
+  
+                <div class="!mt-8">
+                  <button type="submit" class="w-full py-3 px-4 text-sm tracking-wide rounded-lg text-gray-800 bg-[#ff0] hover:bg-[#ff0]/30 focus:outline-none">
+                    Sign in
+                  </button>
+                </div>
+              
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="relative overflow-hidden bg-neutral-900">
+        <svg class="absolute -bottom-20 start-1/2 w-[1900px] transform -translate-x-1/2" width="2745" height="488" viewBox="0 0 2745 488" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.5 330.864C232.505 403.801 853.749 527.683 1482.69 439.719C2111.63 351.756 2585.54 434.588 2743.87 487" class="stroke-neutral-700/50" stroke="currentColor" />
+          <path d="M0.5 308.873C232.505 381.81 853.749 505.692 1482.69 417.728C2111.63 329.765 2585.54 412.597 2743.87 465.009" class="stroke-neutral-700/50" stroke="currentColor" />
+          <path d="M0.5 286.882C232.505 359.819 853.749 483.701 1482.69 395.738C2111.63 307.774 2585.54 390.606 2743.87 443.018" class="stroke-neutral-700/50" stroke="currentColor" />
+          <path d="M0.5 264.891C232.505 337.828 853.749 461.71 1482.69 373.747C2111.63 285.783 2585.54 368.615 2743.87 421.027" class="stroke-neutral-700/50" stroke="currentColor" />
+          <path d="M0.5 242.9C232.505 315.837 853.749 439.719 1482.69 351.756C2111.63 263.792 2585.54 346.624 2743.87 399.036" class="stroke-neutral-700/50" stroke="currentColor" />
+          <path d="M0.5 220.909C232.505 293.846 853.749 417.728 1482.69 329.765C2111.63 241.801 2585.54 324.633 2743.87 377.045" class="stroke-neutral-700/50" stroke="currentColor" />
+          <path d="M0.5 198.918C232.505 271.855 853.749 395.737 1482.69 307.774C2111.63 219.81 2585.54 302.642 2743.87 355.054" class="stroke-neutral-700/50" stroke="currentColor" />
+          <path d="M0.5 176.927C232.505 249.864 853.749 373.746 1482.69 285.783C2111.63 197.819 2585.54 280.651 2743.87 333.063" class="stroke-neutral-700/50" stroke="currentColor" />
+          <path d="M0.5 154.937C232.505 227.873 853.749 351.756 1482.69 263.792C2111.63 175.828 2585.54 258.661 2743.87 311.072" class="stroke-neutral-700/50" stroke="currentColor" />
+          <path d="M0.5 132.946C232.505 205.882 853.749 329.765 1482.69 241.801C2111.63 153.837 2585.54 236.67 2743.87 289.082" class="stroke-neutral-700/50" stroke="currentColor" />
+          <path d="M0.5 110.955C232.505 183.891 853.749 307.774 1482.69 219.81C2111.63 131.846 2585.54 214.679 2743.87 267.091" class="stroke-neutral-700/50" stroke="currentColor" />
+          <path d="M0.5 88.9639C232.505 161.901 853.749 285.783 1482.69 197.819C2111.63 109.855 2585.54 192.688 2743.87 245.1" class="stroke-neutral-700/50" stroke="currentColor" />
+          <path d="M0.5 66.9729C232.505 139.91 853.749 263.792 1482.69 175.828C2111.63 87.8643 2585.54 170.697 2743.87 223.109" class="stroke-neutral-700/50" stroke="currentColor" />
+          <path d="M0.5 44.9819C232.505 117.919 853.749 241.801 1482.69 153.837C2111.63 65.8733 2585.54 148.706 2743.87 201.118" class="stroke-neutral-700/50" stroke="currentColor" />
+          <path d="M0.5 22.991C232.505 95.9276 853.749 219.81 1482.69 131.846C2111.63 43.8824 2585.54 126.715 2743.87 179.127" class="stroke-neutral-700/50" stroke="currentColor" />
+          <path d="M0.5 1C232.505 73.9367 853.749 197.819 1482.69 109.855C2111.63 21.8914 2585.54 104.724 2743.87 157.136" class="stroke-neutral-700/50" stroke="currentColor" />
+        </svg>
+    
+        <div class="relative z-10">
+          <div class="w-full max-w-5xl px-4 xl:px-0 py-10 lg:pt-16 mx-auto">
+            <div class="inline-flex items-center">
+              <!-- Logo -->
+              <img src="/assets/codemitra-high-resolution-logo-transparent.png" width="180" alt="">
+              <!-- End Logo -->
+    
+              <div class="border-s border-neutral-700 ps-5 ms-5">
+                <p class="text-sm text-neutral-400">
+                  © 2025 Preline Labs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer
+    <script src="/assets/js/forms.js"></script>
+</body>
+</html>

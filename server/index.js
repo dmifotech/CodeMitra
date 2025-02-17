@@ -6,7 +6,7 @@ require('dotenv').config();
 const port = process.env.PORT || 3000;
 
 server.use(express.json());
-server.use(cors({ origin: "http://127.0.0.1:5500" }));
+server.use(cors({ origin: "http://127.0.0.1:5501" }));
 server.use(express.static('public'));
 
 

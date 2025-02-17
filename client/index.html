@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,8 +8,10 @@
 </head>
 <style>
     body {
-        background: black;
+
+        scroll-behavior: smooth;
     }
+
 </style>
 <body>
     
@@ -398,9 +399,10 @@
         <div id="hs-navbar-floating-dark" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block" aria-labelledby="hs-navbar-floating-dark-collapse">
           <div class="flex flex-col md:flex-row md:items-center md:justify-end py-2 md:py-0 md:ps-7">
             <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="../../templates/agency/index.html" aria-current="page">Home</a>
-            <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#">Stories</a>
+            <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#stories">Stories</a>
             <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#">Reviews</a>
             <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#">Approach</a>
+            <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#">Contact us</a>
   
             <div class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] [--is-collapse:true] md:[--is-collapse:false] p-3 ps-px sm:px-3 md:py-4">
               <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle flex items-center w-full text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
@@ -447,10 +449,10 @@
                 </div>
               </div>
             </div>
-  
+            
             <div>
-              <a class="group inline-flex items-center gap-x-2 py-2 px-3 bg-[#ff0] font-medium text-sm text-neutral-800 rounded-full focus:outline-none" href="../../templates/agency/index.html#contact">
-                Contact us
+              <a class="group inline-flex items-center gap-x-2 py-2 px-3 bg-[#ff0] font-medium text-sm text-neutral-800 rounded-full focus:outline-none" href="login.html">
+                Login
               </a>
             </div>
           </div>
@@ -463,7 +465,7 @@
     <!-- ========== MAIN CONTENT ========== -->
     <main id="content">
       <!-- Hero -->
-      <div class="bg-neutral-900">
+      <div id="hero" class="bg-neutral-900">
         <div class="max-w-5xl mx-auto px-4 xl:px-0 pt-24 lg:pt-32 pb-24">
           <h1 class="font-semibold text-white text-5xl md:text-6xl">
             <span class="text-[#ff0] ">CodeMitra:</span>  Your Trusted Partner in Digital Innovation! 🚀
@@ -478,7 +480,7 @@
       <!-- End Hero -->
   
       <!-- Clients -->
-      <div class="relative overflow-hidden pt-4 bg-neutral-900">
+      <div id="client" class="relative overflow-hidden pt-4 bg-neutral-900">
         <svg class="absolute -bottom-20 start-1/2 w-[1900px] transform -translate-x-1/2" width="2745" height="488" viewBox="0 0 2745 488" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0.5 330.864C232.505 403.801 853.749 527.683 1482.69 439.719C2111.63 351.756 2585.54 434.588 2743.87 487" class="stroke-neutral-700/50" stroke="currentColor" />
           <path d="M0.5 308.873C232.505 381.81 853.749 505.692 1482.69 417.728C2111.63 329.765 2585.54 412.597 2743.87 465.009" class="stroke-neutral-700/50" stroke="currentColor" />
@@ -542,7 +544,8 @@
       <!-- End Clients -->
   
       <!-- Case Stories -->
-      <div class="bg-neutral-900 bg-gradient-to-t from-black to-transparent">
+      <div id="story
+      " class="bg-neutral-900 bg-gradient-to-t from-black to-transparent">
         <div class="max-w-5xl px-4 xl:px-0 py-24 mx-auto">
           <!-- Title -->
           <div class="max-w-3xl mb-10 lg:mb-14">
