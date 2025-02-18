@@ -1,0 +1,17 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/ije17622/codemitra.dmifotech.com/server"
+PassengerBaseURI "/"
+PassengerNodejs "/home/ije17622/nodevenv/codemitra.dmifotech.com/server/16/bin/node"
+PassengerAppType node
+PassengerStartupFile index.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION BEGIN
+<IfModule Litespeed>
+SetEnv JWT_SECRET msfQMA9SXM7DgZY8SiipAFcDY0duDZeuHqwbyVtM82L8jMpIoLvgmVWRMbeJwG92eCxq56t54jKGKX6Fgzgz3VPQ5oJli1KikFXFLF3akkmYacwFvUyMVtKv49fxxa3aCedMD57jhZvRiSq3fvYvfKzQgo8IHSgZ3OBIOZW9BPRzgrygockjkWJ8kjZ7hwjQDVYGcrikjol15lR2Ktw1fG8goSIHGrTLgDV7RSGcKbTW1qbA
+SetEnv PORT 3000
+SetEnv DB_HOST localhost
+SetEnv DB_NAME ije17622_itservice
+SetEnv DB_USER ije17622_dminfotech_user
+SetEnv DB_PASSWORD asdf@9219
+</IfModule>
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION END
