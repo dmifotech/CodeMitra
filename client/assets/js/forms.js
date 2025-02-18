@@ -14,7 +14,7 @@ async function checkAuth() {
       if (response.status === 401 || response.status === 403) {
         window.location.href = "/login.html";
       } else if (!response.ok) {
-        console.error("Error:", await response.text());
+        console.error("Error:", await response.text())
         window.location.href = "/login.html";
       } else {
         const data = await response.json();
@@ -22,8 +22,8 @@ async function checkAuth() {
         console.log(data.message);
       }
     } catch (error) {
-      console.error("Error:", error);
-      window.location.href = "/login.html";
+      console.error("Errosr:", error);
+    //   window.location.href = "/login.html";
     }
   }
 
