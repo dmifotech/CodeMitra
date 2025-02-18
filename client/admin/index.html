@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>registration form</h1>
+    <form id="registration-form">
+        <input type="text" name="name" id="name" placeholder="FUll NAME">
+        <input type="email" name="email" id="email" placeholder="EMAIL">
+        <input type="password" name="password" id="password" placeholder="PASSWORD">
+        <input type="submit" value="SUBMIT">
+    </form>
+    <script>
+  document.getElementById("registration-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const formObj = {};
+        formData.forEach((value, key) => {
+          formObj[key] = value;
+        });
+        if(formObj['password']!== formObj['confirm-password']) {
+          alert('Password and Confirm Password should be same.');
+          return false;
+        }
+        fetch('xyphor-nexus87.dmifotech.com/sign-up', {
+          method: 'POST',
+          body: JSON.stringify(formObj),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(response => response.json())
+        .then(data => {
+          if(data.error) {
+            alert(data.error);
+          } else {
+            alert('Registration Successful');
+            window.location.href = 'user.dashboard.html';
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('Error in Registration');
+        });
+        event.target.reset();
+      })
+    </script>
+</body>
+</html>
