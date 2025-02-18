@@ -5,7 +5,7 @@ async function checkAuth() {
       return;
     }
     try {
-      const response = await fetch("xyphor-nexus87.dmifotech.com/dashboard", {
+      const response = await fetch("https://xyphor-nexus87.dmifotech.com/dashboard", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
