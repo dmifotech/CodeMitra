@@ -1,24 +1,226 @@
-node:internal/modules/cjs/loader:1031
-  throw err;
-  ^
+Error keeping the connection alive: Error: Server shutdown in progress
+    at Packet.asError (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/mysql2/lib/packets/packet.js:740:17)
+    at Query.execute (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/mysql2/lib/commands/command.js:29:26)
+    at Connection.handlePacket (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/mysql2/lib/base/connection.js:475:34)
+    at PacketParser.onPacket (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/mysql2/lib/base/connection.js:93:12)
+    at PacketParser.executeStart (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/mysql2/lib/base/connection.js:100:25)
+    at Socket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5) {
+  code: 'ER_SERVER_SHUTDOWN',
+  errno: 1053,
+  sqlState: '08S01',
+  sqlMessage: 'Server shutdown in progress',
+  sql: 'SELECT 1'
+}
+Error connecting to the database: AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+/home/ije17622/codemitra.dmifotech.com/server/config/db.js:30
+      throw err;
+      ^
 
-Error: Cannot find module 'express'
-Require stack:
-- /home/ije17622/codemitra.dmifotech.com/server/index.js
-- /usr/local/lsws/fcgi-bin/lsnode.js
-    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
-    at Function.Module._load (node:internal/modules/cjs/loader:873:27)
-    at Module.require (node:internal/modules/cjs/loader:1100:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/index.js:1:17)
-    at Module._compile (node:internal/modules/cjs/loader:1198:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1252:10)
-    at Module.load (node:internal/modules/cjs/loader:1076:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:911:12)
-    at Module.require (node:internal/modules/cjs/loader:1100:19) {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: [
-    '/home/ije17622/codemitra.dmifotech.com/server/index.js',
-    '/usr/local/lsws/fcgi-bin/lsnode.js'
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7) {
+  code: 'ECONNREFUSED',
+  fatal: true,
+  [errors]: [
+    Error: connect ECONNREFUSED ::1:3306
+        at createConnectionError (node:net:1675:14)
+        at afterConnectMultiple (node:net:1705:16) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '::1',
+      port: 3306
+    },
+    Error: connect ECONNREFUSED 127.0.0.1:3306
+        at createConnectionError (node:net:1675:14)
+        at afterConnectMultiple (node:net:1705:16) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 3306
+    }
   ]
 }
+
+Node.js v22.13.1
+Error keeping the connection alive: Error: Server shutdown in progress
+    at Packet.asError (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/mysql2/lib/packets/packet.js:740:17)
+    at Query.execute (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/mysql2/lib/commands/command.js:29:26)
+    at Connection.handlePacket (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/mysql2/lib/base/connection.js:475:34)
+    at PacketParser.onPacket (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/mysql2/lib/base/connection.js:93:12)
+    at PacketParser.executeStart (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/mysql2/lib/base/connection.js:100:25)
+    at Socket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5) {
+  code: 'ER_SERVER_SHUTDOWN',
+  errno: 1053,
+  sqlState: '08S01',
+  sqlMessage: 'Server shutdown in progress',
+  sql: 'SELECT 1'
+}
+Error connecting to the database: AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+/home/ije17622/codemitra.dmifotech.com/server/config/db.js:30
+      throw err;
+      ^
+
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7) {
+  code: 'ECONNREFUSED',
+  fatal: true,
+  [errors]: [
+    Error: connect ECONNREFUSED ::1:3306
+        at createConnectionError (node:net:1675:14)
+        at afterConnectMultiple (node:net:1705:16) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '::1',
+      port: 3306
+    },
+    Error: connect ECONNREFUSED 127.0.0.1:3306
+        at createConnectionError (node:net:1675:14)
+        at afterConnectMultiple (node:net:1705:16) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 3306
+    }
+  ]
+}
+
+Node.js v22.13.1
+Error connecting to the database: AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+/home/ije17622/codemitra.dmifotech.com/server/config/db.js:30
+      throw err;
+      ^
+
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7) {
+  code: 'ECONNREFUSED',
+  fatal: true,
+  [errors]: [
+    Error: connect ECONNREFUSED ::1:3306
+        at createConnectionError (node:net:1675:14)
+        at afterConnectMultiple (node:net:1705:16) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '::1',
+      port: 3306
+    },
+    Error: connect ECONNREFUSED 127.0.0.1:3306
+        at createConnectionError (node:net:1675:14)
+        at afterConnectMultiple (node:net:1705:16) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 3306
+    }
+  ]
+}
+
+Node.js v22.13.1
+Error keeping the connection alive: Error: Server shutdown in progress
+    at Packet.asError (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/mysql2/lib/packets/packet.js:740:17)
+    at Query.execute (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/mysql2/lib/commands/command.js:29:26)
+    at Connection.handlePacket (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/mysql2/lib/base/connection.js:475:34)
+    at PacketParser.onPacket (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/mysql2/lib/base/connection.js:93:12)
+    at PacketParser.executeStart (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/mysql2/lib/base/connection.js:100:25)
+    at Socket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5) {
+  code: 'ER_SERVER_SHUTDOWN',
+  errno: 1053,
+  sqlState: '08S01',
+  sqlMessage: 'Server shutdown in progress',
+  sql: 'SELECT 1'
+}
+Error connecting to the database: AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+/home/ije17622/codemitra.dmifotech.com/server/config/db.js:30
+      throw err;
+      ^
+
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7) {
+  code: 'ECONNREFUSED',
+  fatal: true,
+  [errors]: [
+    Error: connect ECONNREFUSED ::1:3306
+        at createConnectionError (node:net:1675:14)
+        at afterConnectMultiple (node:net:1705:16) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '::1',
+      port: 3306
+    },
+    Error: connect ECONNREFUSED 127.0.0.1:3306
+        at createConnectionError (node:net:1675:14)
+        at afterConnectMultiple (node:net:1705:16) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 3306
+    }
+  ]
+}
+
+Node.js v22.13.1
+Error connecting to the database: AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+/home/ije17622/codemitra.dmifotech.com/server/config/db.js:30
+      throw err;
+      ^
+
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7) {
+  code: 'ECONNREFUSED',
+  fatal: true,
+  [errors]: [
+    Error: connect ECONNREFUSED ::1:3306
+        at createConnectionError (node:net:1675:14)
+        at afterConnectMultiple (node:net:1705:16) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '::1',
+      port: 3306
+    },
+    Error: connect ECONNREFUSED 127.0.0.1:3306
+        at createConnectionError (node:net:1675:14)
+        at afterConnectMultiple (node:net:1705:16) {
+      errno: -111,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 3306
+    }
+  ]
+}
+
+Node.js v22.13.1
