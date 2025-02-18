@@ -11,7 +11,7 @@ const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$
  
 router.get("/get-data", (req, res) => {
 
-  db.query("SELECT * FROM employee", (err, results) => {
+  db.query("SELECT * FROM it_employee", (err, results) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
@@ -29,7 +29,7 @@ router.post("/sign-up", (req, res) => {
         return res.status(400).json({ error: "Invalid email or password" });
       }
     db.query(
-      "SELECT * FROM employee WHERE emp_email = ?",
+      "SELECT * FROM it_employee WHERE emp_email = ?",
       [email],
       (err, results) => {
         if (err) {
@@ -41,13 +41,13 @@ router.post("/sign-up", (req, res) => {
   
         // Fetch latest emp_id
         db.query(
-          "SELECT emp_id FROM employee ORDER BY emp_id DESC LIMIT 1",
+          "SELECT emp_id FROM it_employee ORDER BY emp_id DESC LIMIT 1",
           (err, lastEmp) => {
             if (err) {
               return res.status(500).json({ error: err.message });
             }
   
-            let empNumber = 1; // Default if no employees exist
+            let empNumber = 1; // Default if no it_employees exist
             if (lastEmp.length > 0) {
               const lastId = lastEmp[0].emp_id; // Example: EMP2025003
               const lastNum = parseInt(lastId.slice(7)); // Extract 003
@@ -65,7 +65,7 @@ router.post("/sign-up", (req, res) => {
               emp_password: hashedPassword,
             };
   
-            db.query("INSERT INTO employee SET ?", newUser, (err, result) => {
+            db.query("INSERT INTO it_employee SET ?", newUser, (err, result) => {
               if (err) {
                 return res.status(500).json({ error: err.message });
               }
@@ -92,7 +92,7 @@ router.post("/sign-up", (req, res) => {
       });
     }
   
-    const sql = "SELECT * FROM employee WHERE emp_email = ?";
+    const sql = "SELECT * FROM it_employee WHERE emp_email = ?";
     db.query(sql, [email], (err, results) => {
       if (err) {
         console.error("Failed to select user:", err);
@@ -134,7 +134,7 @@ router.post("/sign-up", (req, res) => {
     const email = req.user.email;
 
     
-    const sql = "SELECT * FROM employee WHERE emp_email = ?";
+    const sql = "SELECT * FROM it_employee WHERE emp_email = ?";
   
     db.query(sql, [email], (err, result) => {
       if (err) return res.status(500).json({ message: "Server error" });
