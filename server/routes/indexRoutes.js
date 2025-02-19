@@ -20,7 +20,7 @@ router.get("/get-data", (req, res) => {
 });
 
 //registration for job-seeker
-router.post("/sign-up", (req, res) => {
+router.post("/sign-ups", (req, res) => {
     const { name, email, password } = req.body;
     if (!name || !email || !password) {
       return res.status(400).json({ error: "All fields are required" });
@@ -76,7 +76,56 @@ router.post("/sign-up", (req, res) => {
       }
     );
   });
-  router.post("/sign-in", (req, res) => {
+router.post('/sign-up', async (req, res) => {
+  const { name, email, password, phone, role } = req.body;
+
+  // Check if all required fields are provided
+  if (!name || !email || !password || !phone || !role) {
+    return res.status(400).json({ message: 'All fields are required' });
+  }
+
+  try {
+    // Check if user already exists (by email)
+    const query = 'SELECT * FROM users WHERE email = ?';
+    db.execute(query, [email], async (err, results) => {
+      if (err) {
+        console.error(err);
+        return res.status(500).json({ message: 'Server error' });
+      }
+
+      if (results.length > 0) {
+        return res.status(409).json({ message: 'Email is already registered' });
+      }
+
+      // Hash the password before saving it in the database
+      const hashedPassword = await bcrypt.hash(password, 10);  // 10 is the salt rounds
+
+      // Insert the new user into the database
+      const insertQuery = 'INSERT INTO users (name, email, password, phone, role) VALUES (?, ?, ?, ?, ?)';
+      db.execute(insertQuery, [name, email, hashedPassword, phone, role], (err, results) => {
+        if (err) {
+          console.error(err);
+          return res.status(500).json({ message: 'Failed to create user' });
+        }
+
+        // Create JWT token for the new user
+        const payload = { userId: results.insertId, role };  // Use the inserted user ID
+        const token = jwt.sign(payload, JWT_SECRET, { expiresIn: '1h' });  // Token expires in 1 hour
+
+        // Send success response with token
+        res.status(201).json({
+          message: 'User registered successfully',
+          token: token
+        });
+      });
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
+router.post("/sign-in", (req, res) => {
     const { email, password } = req.body;
   
     if (!email || !password) {
@@ -92,7 +141,7 @@ router.post("/sign-up", (req, res) => {
       });
     }
   
-    const sql = "SELECT * FROM it_employee WHERE emp_email = ?";
+    const sql = "SELECT * FROM users WHERE email = ?";
     db.query(sql, [email], (err, results) => {
       if (err) {
         console.error("Failed to select user:", err);
@@ -106,7 +155,7 @@ router.post("/sign-up", (req, res) => {
   
       const user = results[0]; // Correctly define user
   
-      bcrypt.compare(password, user.emp_password, (err, isMatch) => {
+      bcrypt.compare(password, user.password, (err, isMatch) => {
         if (err) {
           console.error("Failed to compare passwords:", err);
           return res.status(500).json({ error: "Internal server error" });
@@ -118,7 +167,7 @@ router.post("/sign-up", (req, res) => {
   
         // Generate JWT token using the user object
         const token = jwt.sign(
-          { id: user.emp_id, email: user.emp_email, role: user.role },
+          { id: user.id, email: user.email, role: user.role },
           process.env.JWT_SECRET,
           { expiresIn: "1h" }
         );
@@ -133,7 +182,7 @@ router.post("/sign-up", (req, res) => {
   
   router.get("/dashboard", authenticateToken, (req, res) => {
     const email = req.user.email;
-    const sql = "SELECT * FROM it_employee WHERE emp_email = ?";
+    const sql = "SELECT * FROM users WHERE email = ?";
   
     db.query(sql, [email], (err, result) => {
       if (err) return res.status(500).json({ message: "Server error" });
