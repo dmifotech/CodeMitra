@@ -116,3 +116,5 @@ router.post("/sign-in", (req, res) => {
     });
   });
 });
+
+module.exports = router;

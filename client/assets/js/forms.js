@@ -23,7 +23,7 @@ async function checkAuth() {
       }
     } catch (error) {
       console.error("Errosr:", error);
-    //   window.location.href = "/login.html";
+      window.location.href = "/login.html";
     }
   }
 
