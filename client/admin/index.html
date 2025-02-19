@@ -1,76 +1,3 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-<!--    <title>Document</title>-->
-<!--</head>-->
-<!--<body>-->
-<!--    <h1>registration form</h1>-->
-<!--    <form id="registration-form">-->
-<!--        <input type="text" name="name" id="name" placeholder="FUll NAME">-->
-<!--        <input type="email" name="email" id="email" placeholder="EMAIL">-->
-<!--        <input type="password" name="password" id="password" placeholder="PASSWORD">-->
-<!--        <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm PASSWORD">-->
-<!--        <input type="submit" value="SUBMIT">-->
-<!--    </form>-->
-<!--    <script>-->
-<!--  document.getElementById("registration-form").addEventListener("submit", function(event) {-->
-<!--        event.preventDefault();-->
-<!--        const formData = new FormData(event.target);-->
-<!--        const formObj = {};-->
-<!--        formData.forEach((value, key) => {-->
-<!--          formObj[key] = value;-->
-<!--        });-->
-<!--        console.log(formObj);-->
-<!--        if(formObj['password']!== formObj['confirm-password']) {-->
-<!--          alert('Password and Confirm Password should be same.');-->
-<!--          return false;-->
-<!--        }-->
-<!--        fetch('https://xyphor-nexus87.dmifotech.com/sign-up', {-->
-<!--          method: 'POST',-->
-<!--          body: JSON.stringify(formObj),-->
-<!--          headers: {-->
-<!--            'Content-Type': 'application/json'-->
-<!--          }-->
-<!--        })-->
-<!--        .then(response => response.json())-->
-<!--        .then(data => {-->
-<!--          if(data.error) {-->
-<!--            alert(data.error);-->
-<!--          } else {-->
-<!--            alert('Registration Successful');-->
-<!--            window.location.href = 'user.dashboard.html';-->
-<!--          }-->
-<!--        })-->
-<!--        .catch(error => {-->
-<!--          console.error('Error:', error);-->
-<!--          alert(error);-->
-<!--        });-->
-<!--        event.target.reset();-->
-<!--      })-->
-<!--    </script>-->
-<!--    <script>-->
-<!--        async function getData() {-->
-<!--  try {-->
-<!--    const response = await fetch("https://xyphor-nexus87.dmifotech.com/get-data");-->
-<!--    if (!response.ok) {-->
-<!--      throw new Error(`HTTP error! Status: ${response.status}`);-->
-<!--    }-->
-<!--    const data = await response.json();-->
-<!--    console.log("Fetched Data:", data);-->
-<!--    return data;-->
-<!--  } catch (error) {-->
-<!--    console.error("Error fetching data:", error);-->
-<!--    return null;-->
-<!--  }-->
-<!--}-->
-
-<!--getData();-->
-
-<!--    </script>-->
-<!--</body>-->
-<!--</html>-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -147,7 +74,7 @@
       formData.forEach((value, key) => data[key] = value);
       
       try {
-        const response = await fetch('https://xyphor-nexus87.dmifotech.com/sign-up', {
+        const response = await fetch('https://xyphor-nexus87.dmifotech.com/auth/sign-up', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)

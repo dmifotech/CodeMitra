@@ -14,7 +14,11 @@ server.use(express.static('public'));
 server.get('/', (req, res) => {
   res.json('Hello World!');
 });
-server.use("/", indexRoutes);
+server.use("/", indexRoutes)
+server.use('/auth', authRoutes);
+server.use('/client', clientRoutes);
+server.use('/developer', developerRoutes);
+server.use('/admin', adminRoutes);;
 
 
 server.listen(port, () => {
