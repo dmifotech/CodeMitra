@@ -568,7 +568,7 @@
       if (response.ok) {
         console.log("Login successful:", data);
         localStorage.setItem("token", data.token);
-        window.location.href = "user.dashboard.html";
+        window.location.href = "emp/";
       } else {
         alert(data.error || "Login failed");
       }

@@ -11,29 +11,21 @@ const passwordRegex =
 
 router.post("/sign-up", async (req, res) => {
   const { name, email, password, phone, role } = req.body;
-
-  // Check if all required fields are provided
   if (!name || !email || !password || !phone || !role) {
     return res.status(400).json({ message: "All fields are required" });
   }
 
   try {
-    // Check if user already exists (by email)
     const query = "SELECT * FROM users WHERE email = ?";
     db.execute(query, [email], async (err, results) => {
       if (err) {
         console.error(err);
         return res.status(500).json({ message: "Server error" });
       }
-
       if (results.length > 0) {
         return res.status(409).json({ message: "Email is already registered" });
       }
-
-      // Hash the password before saving it in the database
-      const hashedPassword = await bcrypt.hash(password, 10); // 10 is the salt rounds
-
-      // Insert the new user into the database
+      const hashedPassword = await bcrypt.hash(password, 10);
       const insertQuery =
         "INSERT INTO users (name, email, password, phone, role) VALUES (?, ?, ?, ?, ?)";
       db.execute(
@@ -44,12 +36,8 @@ router.post("/sign-up", async (req, res) => {
             console.error(err);
             return res.status(500).json({ message: "Failed to create user" });
           }
-
-          // Create JWT token for the new user
-          const payload = { userId: results.insertId, role }; // Use the inserted user ID
-          const token = jwt.sign(payload, JWT_SECRET, { expiresIn: "1h" }); // Token expires in 1 hour
-
-          // Send success response with token
+          const payload = { userId: results.insertId, role };  
+          const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "1h" }); 
           res.status(201).json({
             message: "User registered successfully",
             token: token,

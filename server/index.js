@@ -4,7 +4,7 @@ const indexRoutes = require('./routes/indexRoutes.js');
 const cors = require('cors');
 const authRoutes = require('./routes/authRoutes');
 const clientRoutes = require('./routes/clientRoutes');
-const developerRoutes = require('./routes/developerRoutes');
+const employeeRoutes = require('./routes/employeeRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 require('dotenv').config();
 const port = process.env.PORT || 3000;
@@ -21,7 +21,7 @@ server.get('/', (req, res) => {
 server.use("/", indexRoutes);
 server.use('/auth', authRoutes);
 server.use('/client', clientRoutes);
-server.use('/developer', developerRoutes);
+server.use('/employee', employeeRoutes);
 server.use('/admin', adminRoutes);
 
 
