@@ -90,4 +90,14 @@ router.get('/profile', authenticateToken, authorizeRoles('employee'), (req, res)
 });
 
 
+router.post('/update-profile', authenticateToken, authorizeRoles('employee'), (req, res) => {
+    const email = req.user.email;
+    const {profile, gender, bio }= req.body;
+    const sql = "UPDATE users SET profile =?, gender =?, bio =? WHERE email =?";
+    db.query(sql, [profile, gender, bio, email], (err, result) => {
+        if (err) return res.status(500).json({ message: "Server error" });
+        res.json({ message: "Profile updated successfully" });
+    });
+});
+
 module.exports = router;
