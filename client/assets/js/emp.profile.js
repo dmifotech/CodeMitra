@@ -40,7 +40,7 @@ async function getData() {
     formData.forEach((value, key) => {
       formObj[key] = value;
     });
-
+    console.log(formObj);
     // try {
     //   const response = await fetch("https://xyphor-nexus87.dmifotech.com/employee/update-profile", {
     //     method: "POST",
