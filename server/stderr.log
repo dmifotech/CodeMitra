@@ -1,0 +1,386 @@
+/home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:105
+server.post('/update-profile', (req, res) => {
+^
+
+ReferenceError: server is not defined
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:105:1)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1699:10)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Module._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/index.js:7:24)
+
+Node.js v22.13.1
+/home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:105
+server.post('/update-profile', (req, res) => {
+^
+
+ReferenceError: server is not defined
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:105:1)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1699:10)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Module._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/index.js:7:24)
+
+Node.js v22.13.1
+/home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:105
+server.post('/update-profile', (req, res) => {
+^
+
+ReferenceError: server is not defined
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:105:1)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1699:10)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Module._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/index.js:7:24)
+
+Node.js v22.13.1
+/home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:105
+server.post('/update-profile', (req, res) => {
+^
+
+ReferenceError: server is not defined
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:105:1)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1699:10)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Module._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/index.js:7:24)
+
+Node.js v22.13.1
+/home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:105
+server.post('/update-profile', (req, res) => {
+^
+
+ReferenceError: server is not defined
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:105:1)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1699:10)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Module._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/index.js:7:24)
+
+Node.js v22.13.1
+/home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:105
+server.post('/update-profile', (req, res) => {
+^
+
+ReferenceError: server is not defined
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:105:1)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1699:10)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Module._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/index.js:7:24)
+
+Node.js v22.13.1
+/home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:105
+server.post('/update-profile', (req, res) => {
+^
+
+ReferenceError: server is not defined
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:105:1)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1699:10)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Module._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/index.js:7:24)
+
+Node.js v22.13.1
+/home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:105
+server.post('/update-profile', (req, res) => {
+^
+
+ReferenceError: server is not defined
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:105:1)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1699:10)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Module._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/index.js:7:24)
+
+Node.js v22.13.1
+/home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:105
+server.post('/update-profile', (req, res) => {
+^
+
+ReferenceError: server is not defined
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:105:1)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1699:10)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Module._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/index.js:7:24)
+
+Node.js v22.13.1
+PayloadTooLargeError: request entity too large
+    at readStream (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/raw-body/index.js:163:17)
+    at getRawBody (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/raw-body/index.js:116:12)
+    at read (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/body-parser/lib/read.js:79:3)
+    at jsonParser (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/body-parser/lib/types/json.js:138:5)
+    at Layer.handle [as handle_request] (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express/lib/router/index.js:328:13)
+    at /home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express/lib/router/index.js:280:10)
+    at expressInit (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express/lib/middleware/init.js:40:5)
+PayloadTooLargeError: request entity too large
+    at readStream (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/raw-body/index.js:163:17)
+    at getRawBody (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/raw-body/index.js:116:12)
+    at read (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/body-parser/lib/read.js:79:3)
+    at jsonParser (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/body-parser/lib/types/json.js:138:5)
+    at Layer.handle [as handle_request] (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express/lib/router/index.js:328:13)
+    at /home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express/lib/router/index.js:280:10)
+    at expressInit (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express/lib/middleware/init.js:40:5)
+SyntaxError: Unexpected token '-', "------WebK"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/body-parser/lib/types/json.js:169:10)
+    at parse (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/body-parser/lib/types/json.js:86:15)
+    at /home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/raw-body/index.js:238:16)
+    at done (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/raw-body/index.js:227:7)
+    at IncomingMessage.onEnd (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/raw-body/index.js:287:7)
+    at IncomingMessage.emit (node:events:524:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+SyntaxError: Unexpected token '-', "------WebK"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/body-parser/lib/types/json.js:169:10)
+    at parse (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/body-parser/lib/types/json.js:86:15)
+    at /home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/raw-body/index.js:238:16)
+    at done (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/raw-body/index.js:227:7)
+    at IncomingMessage.onEnd (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/raw-body/index.js:287:7)
+    at IncomingMessage.emit (node:events:524:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+SyntaxError: Unexpected token '-', "------WebK"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/body-parser/lib/types/json.js:169:10)
+    at parse (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/body-parser/lib/types/json.js:86:15)
+    at /home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/raw-body/index.js:238:16)
+    at done (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/raw-body/index.js:227:7)
+    at IncomingMessage.onEnd (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/raw-body/index.js:287:7)
+    at IncomingMessage.emit (node:events:524:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+TypeError: Cannot read properties of undefined (reading 'email')
+    at /home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:98:28
+    at Layer.handle [as handle_request] (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express/lib/router/layer.js:95:5)
+    at /home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express/lib/router/index.js:280:10)
+    at jsonParser (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/body-parser/lib/types/json.js:122:7)
+    at Layer.handle [as handle_request] (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express/lib/router/layer.js:95:5)
+/home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:130
+          email,
+          ^
+
+ReferenceError: email is not defined
+    at /home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:130:11
+    at /home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express-fileupload/lib/utilities.js:65:52
+    at WriteStream.<anonymous> (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express-fileupload/lib/utilities.js:236:5)
+    at WriteStream.emit (node:events:524:28)
+    at emitCloseNT (node:internal/streams/destroy:148:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+
+Node.js v22.13.1
+/home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:130
+          email,
+          ^
+
+ReferenceError: email is not defined
+    at /home/ije17622/codemitra.dmifotech.com/server/routes/employeeRoutes.js:130:11
+    at /home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express-fileupload/lib/utilities.js:65:52
+    at WriteStream.<anonymous> (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/express-fileupload/lib/utilities.js:236:5)
+    at WriteStream.emit (node:events:524:28)
+    at emitCloseNT (node:internal/streams/destroy:148:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+
+Node.js v22.13.1
+/home/ije17622/codemitra.dmifotech.com/server/routes/authRoutes.js:107
+router.post('/update-password', authenticateToken, async (req, res) => {
+                                ^
+
+ReferenceError: authenticateToken is not defined
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/routes/authRoutes.js:107:33)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1699:10)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Module._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/index.js:5:20)
+
+Node.js v22.13.1
+/home/ije17622/codemitra.dmifotech.com/server/routes/authRoutes.js:107
+router.post('/update-password', authenticateToken, async (req, res) => {
+                                ^
+
+ReferenceError: authenticateToken is not defined
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/routes/authRoutes.js:107:33)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1699:10)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Module._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/index.js:5:20)
+
+Node.js v22.13.1
+/home/ije17622/codemitra.dmifotech.com/server/routes/authRoutes.js:107
+router.post('/update-password', authenticateToken, async (req, res) => {
+                                ^
+
+ReferenceError: authenticateToken is not defined
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/routes/authRoutes.js:107:33)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1699:10)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Module._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/index.js:5:20)
+
+Node.js v22.13.1
+/home/ije17622/codemitra.dmifotech.com/server/routes/authRoutes.js:107
+router.post('/update-password', authenticateToken, async (req, res) => {
+                                ^
+
+ReferenceError: authenticateToken is not defined
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/routes/authRoutes.js:107:33)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1699:10)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Module._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/index.js:5:20)
+
+Node.js v22.13.1
+/home/ije17622/codemitra.dmifotech.com/server/routes/authRoutes.js:107
+router.post('/update-password', authenticateToken, async (req, res) => {
+                                ^
+
+ReferenceError: authenticateToken is not defined
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/routes/authRoutes.js:107:33)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1699:10)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Module._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/index.js:5:20)
+
+Node.js v22.13.1
+/home/ije17622/codemitra.dmifotech.com/server/routes/authRoutes.js:107
+router.post('/update-password', authenticateToken, async (req, res) => {
+                                ^
+
+ReferenceError: authenticateToken is not defined
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/routes/authRoutes.js:107:33)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1699:10)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Module._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/index.js:5:20)
+
+Node.js v22.13.1
+/home/ije17622/codemitra.dmifotech.com/server/routes/authRoutes.js:107
+router.post('/update-password', authenticateToken, async (req, res) => {
+                                ^
+
+ReferenceError: authenticateToken is not defined
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/routes/authRoutes.js:107:33)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1699:10)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Module._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/index.js:5:20)
+
+Node.js v22.13.1
+/home/ije17622/codemitra.dmifotech.com/server/routes/authRoutes.js:107
+router.post('/update-password', authenticateToken, async (req, res) => {
+                                ^
+
+ReferenceError: authenticateToken is not defined
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/routes/authRoutes.js:107:33)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1699:10)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Module._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/home/ije17622/codemitra.dmifotech.com/server/index.js:5:20)
+
+Node.js v22.13.1
+Error updating password: Error: You have tried to call .then(), .catch(), or invoked await on the result of query that is not a promise, which is a programming error. Try calling con.promise().query(), or require('mysql2/promise') instead of 'mysql2' for a promise-compatible version of the query interface. To learn how to use async/await or Promises check out documentation at https://sidorares.github.io/node-mysql2/docs#using-promise-wrapper, or the mysql2 documentation at https://sidorares.github.io/node-mysql2/docs/documentation/promise-wrapper
+    at Query.then (/home/ije17622/nodevenv/codemitra.dmifotech.com/server/22/lib/node_modules/mysql2/lib/commands/query.js:43:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='utf-8'>
+BrokenPipeError: [Errno 32] Broken pipe

@@ -23,6 +23,9 @@ async function getData() {
         document.getElementById("user-id").value = data.userDetails.user_id;
         document.getElementById("name").value = data.userDetails.name;
         document.getElementById("phone").value = data.userDetails.phone;
+        document.getElementById("bio").value = data.userDetails.bio;
+        document.getElementById("profile").src = data.userDetails.profile_img;
+        document.getElementById("nav-img").src = data.userDetails.profile_img;
       }
     } catch (error) {
       console.error("Errosr:", error);
@@ -35,32 +38,41 @@ async function getData() {
   .getElementById("profile-form")
   .addEventListener("submit", async function (event) {
     event.preventDefault();
-    const formObj = {};
     const formData = new FormData(event.target);
-    formData.forEach((value, key) => {
-      formObj[key] = value;
-    });
-    console.log(formObj);
-    // try {
-    //   const response = await fetch("https://xyphor-nexus87.dmifotech.com/employee/update-profile", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify(formObj),
-    //   });
+    
+    const token = localStorage.getItem("token"); // Get the token from local storage
 
-    //   const data = await response.json();
+    try {
+      const response = await fetch("https://xyphor-nexus87.dmifotech.com/employee/update-profile", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`, // Add Authorization token
+        },
+        body: formData, // Send form data
+      });
 
-    //   if (response.ok) {
-    //     console.log("Login successful:", data);
-    //     localStorage.setItem("token", data.token);
-    //     window.location.href = "user.dashboard.html";
-    //   } else {
-    //     alert(data.error || "Login failed");
-    //   }
-    // } catch (error) {
-    //   console.error("Error:", error);
-    //   alert("An error occurred during login");
-    // }
+      const data = await response.json();
+
+      if (response.ok) {
+        Swal.fire({
+          icon: "success",
+          title: "Profile Updated!",
+          text: "Your profile has been updated successfully.",
+        }).then(() => {
+          window.location.reload(); // Reload page after success
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Error!",
+          text: data.error || "Profile update failed.",
+        });
+      }
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Error!",
+        text: "An error occurred during the profile update.",
+      });
+    }
   });

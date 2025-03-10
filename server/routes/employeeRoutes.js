@@ -2,6 +2,7 @@ const express = require('express');
 const db = require("../config/db");
 const fileUpload = require('express-fileupload');
 const path = require('path');
+const bcrypt = require("bcryptjs");
 const fs = require('fs');
 const  authenticateToken  = require('../middleware/authenticateToken'); // ✅ Correct path
 const { authorizeRoles } = require('../middleware/authorizeRoles'); // ✅ Correct path
@@ -9,7 +10,9 @@ const { authorizeRoles } = require('../middleware/authorizeRoles'); // ✅ Corre
 // console.log('authorizeRoles:', authorizeRoles); // Debugging
 
 const router = express.Router();
+
 router.use(fileUpload());
+router.use(express.json());
 router.get('/dashboard', authenticateToken, authorizeRoles('employee'), (req, res) => {
     const email = req.user.email;
     
@@ -92,21 +95,9 @@ router.get('/profile', authenticateToken, authorizeRoles('employee'), (req, res)
     });
 });
 
-
-router.post('/update-profile', authenticateToken, authorizeRoles('employee'), (req, res) => {
-    const email = req.user.email;
-    const {profile, gender, bio }= req.body;
-    const sql = "UPDATE users SET profile =?, gender =?, bio =? WHERE email =?";
-    db.query(sql, [profile, gender, bio, email], (err, result) => {
-        if (err) return res.status(500).json({ message: "Server error" });
-        res.json({ message: "Profile updated successfully" });
-    });
-});
-server.post('/update-profile', (req, res) => {
-    const email = req.user.email;
-    const { gender, bio }= req.body;
+router.post('/update-profile',authenticateToken, authorizeRoles('employee'), (req, res) => {
+  const {email,phone,bio} = req.body;
     const image = req.files ? req.files.image : null; // Access the uploaded file
-  
     if (!image) {
       return res.status(400).json({ error: 'No image uploaded' });
     }
@@ -117,7 +108,8 @@ server.post('/update-profile', (req, res) => {
     const imageName = `${randomStr}-${date.getTime()}.jpeg`;
   
     // Path to store the image locally
-    const uploadDir = path.join(__dirname, 'uploads');
+    const uploadDir = path.join(__dirname, './../uploads'); // Moves to root 'uploads'
+
     if (!fs.existsSync(uploadDir)) {
       fs.mkdirSync(uploadDir, { recursive: true });
     }
@@ -132,16 +124,70 @@ server.post('/update-profile', (req, res) => {
   
       // Construct the image URL (Update this based on your actual domain)
       const imageUrl = `https://xyphor-nexus87.dmifotech.com/uploads/${imageName}`;
-  
-      // Return response with form details and image URL
+       const sql = `
+      UPDATE users
+      SET 
+        bio = COALESCE(?, bio), 
+        phone = COALESCE(?, phone), 
+        profile_img = COALESCE(?, profile_img) 
+      WHERE email = ?;
+    `;
+
+    // Execute the SQL query
+    db.query(sql, [bio || null, phone || null, imageUrl || null, email], (err, result) => {
+      if (err) {
+        console.error("Error updating profile:", err);
+        return res.status(500).json({ error: "Database update failed" });
+      }
+
       res.status(200).json({
-        message: 'Profile updated successfully',
+        message: "Profile updated successfully",
         user: {
           email,
-          imageUrl,
+          phone,
+          bio,
+          profile_img: imageUrl,
         },
       });
     });
-  });
+  }
+);
+    });
+    
+router.post('/update-password', authenticateToken, async (req, res) => {
+  const email = req.user.email;
+  const { oldPassword, newPassword } = req.body;
 
+  if (!email || !oldPassword || !newPassword) {
+    return res.status(400).json({ error: 'All fields are required' });
+  }
+
+  try {
+    // Fetch existing password from DB
+    const [rows] = await db.promise().query('SELECT password FROM users WHERE email = ?', [email]);
+    
+    if (rows.length === 0) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    // Compare old password
+    const passwordMatch = await bcrypt.compare(oldPassword, rows[0].password);
+    if (!passwordMatch) {
+      return res.status(401).json({ error: 'Incorrect old password' });
+    }
+
+    // Hash new password
+    const hashedPassword = await bcrypt.hash(newPassword, 10);
+
+    // Update password in DB
+    await db.promise().query('UPDATE users SET password = ? WHERE email = ?', [hashedPassword, email]);
+
+    res.status(200).json({ message: 'Password updated successfully' });
+  } catch (error) {
+    console.error('Error updating password:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+   
+    
 module.exports = router;

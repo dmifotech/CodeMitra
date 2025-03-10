@@ -18,7 +18,14 @@ async function getData() {
         // window.location.href = "/login.html";
       } else {
         const data = await response.json();
+        console.log(data)
+        // document.getElementById("email").value = data.userDetails.email;
         document.getElementById("user-id").value = data.userDetails.user_id;
+        // document.getElementById("name").value = data.userDetails.name;
+        // document.getElementById("phone").value = data.userDetails.phone;
+        // document.getElementById("bio").value = data.userDetails.bio;
+        document.getElementById("profile").src = data.userDetails.profile_img;
+        document.getElementById("nav-img").src = data.userDetails.profile_img;
       }
     } catch (error) {
       console.error("Errosr:", error);
@@ -31,32 +38,48 @@ async function getData() {
   .getElementById("account-form")
   .addEventListener("submit", async function (event) {
     event.preventDefault();
-    const formObj = {};
     const formData = new FormData(event.target);
+    const formObj = {}
     formData.forEach((value, key) => {
       formObj[key] = value;
     });
-    console.log(formObj);
-    // try {
-    //   const response = await fetch("https://xyphor-nexus87.dmifotech.com/employee/update-profile", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify(formObj),
-    //   });
+    
+    const token = localStorage.getItem("token"); // Get the token from local storage
 
-    //   const data = await response.json();
+    try {
+      const response = await fetch("https://xyphor-nexus87.dmifotech.com/employee/update-password", {
+        method: "POST",
+        headers: {
+                      "Content-Type": "application/json",
 
-    //   if (response.ok) {
-    //     console.log("Login successful:", data);
-    //     localStorage.setItem("token", data.token);
-    //     window.location.href = "user.dashboard.html";
-    //   } else {
-    //     alert(data.error || "Login failed");
-    //   }
-    // } catch (error) {
-    //   console.error("Error:", error);
-    //   alert("An error occurred during login");
-    // }
+          Authorization: `Bearer ${token}`, // Add Authorization token
+        },
+                body: JSON.stringify(formObj), // Convert form object to JSON
+
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        Swal.fire({
+          icon: "success",
+          title: "Password Updated!",
+          text: "Your password has been updated successfully.",
+        }).then(() => {
+          window.location.reload(); // Reload page after success
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Error!",
+          text: data.error || "Password update failed.",
+        });
+      }
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Error!",
+        text: "An error occurred during the password update.",
+      });
+    }
   });
