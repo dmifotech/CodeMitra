@@ -94,9 +94,9 @@ async function checkAuth() {
                   </td>
                   <td class="size-px whitespace-nowrap">
                     <div class="px-6 py-1.5">
-                      <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium" href="#">
+                      <button onclick='window.location.href="project.html"' class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium" href="#">
                         Edit
-                      </a>
+                      </button>
                       
                     </div>
                   </td>
