@@ -1,12 +1,15 @@
 const express = require('express');
 const db = require("../config/db");
+const fileUpload = require('express-fileupload');
+const path = require('path');
+const fs = require('fs');
 const  authenticateToken  = require('../middleware/authenticateToken'); // ✅ Correct path
 const { authorizeRoles } = require('../middleware/authorizeRoles'); // ✅ Correct path
 // console.log('authenticateToken:', authenticateToken); // Debugging
 // console.log('authorizeRoles:', authorizeRoles); // Debugging
 
 const router = express.Router();
-
+router.use(fileUpload());
 router.get('/dashboard', authenticateToken, authorizeRoles('employee'), (req, res) => {
     const email = req.user.email;
     
@@ -99,5 +102,46 @@ router.post('/update-profile', authenticateToken, authorizeRoles('employee'), (r
         res.json({ message: "Profile updated successfully" });
     });
 });
+server.post('/update-profile', (req, res) => {
+    const email = req.user.email;
+    const { gender, bio }= req.body;
+    const image = req.files ? req.files.image : null; // Access the uploaded file
+  
+    if (!image) {
+      return res.status(400).json({ error: 'No image uploaded' });
+    }
+  
+    // Generate a unique name for the image
+    const date = new Date();
+    const randomStr = Math.random().toString(36).substring(2, 10); // Generate a random string
+    const imageName = `${randomStr}-${date.getTime()}.jpeg`;
+  
+    // Path to store the image locally
+    const uploadDir = path.join(__dirname, 'uploads');
+    if (!fs.existsSync(uploadDir)) {
+      fs.mkdirSync(uploadDir, { recursive: true });
+    }
+    
+    const imagePath = path.join(uploadDir, imageName);
+  
+    // Move the uploaded file to the 'uploads' directory
+    image.mv(imagePath, (err) => {
+      if (err) {
+        return res.status(500).json({ error: 'Error uploading image' });
+      }
+  
+      // Construct the image URL (Update this based on your actual domain)
+      const imageUrl = `https://xyphor-nexus87.dmifotech.com/uploads/${imageName}`;
+  
+      // Return response with form details and image URL
+      res.status(200).json({
+        message: 'Profile updated successfully',
+        user: {
+          email,
+          imageUrl,
+        },
+      });
+    });
+  });
 
 module.exports = router;
